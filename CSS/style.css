@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #000000;
+    background-color: white;
+}
+
+hr {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+img {
+    width: auto;
+}
+
+h1 {
+    font-family: "Titillium Web", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    color: #000000;
+    margin-top: 10px;
+    padding-left: 30px;
+}
+
+header  div {
+    background-color:#ffffff;
+    ;
+}
+
+.Encabezado {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#ffffff;
+    border-style: solid;
+    border-color: #000000;
+    padding: 5px;
+}
+
+.Encabezado div h1 {
+    margin: 5px;
+    padding: 5px;
+    background-color:#ffffff;
+    ;
+
+}
+.logo {
+    margin: 5px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    background-color:#ffffff;
+    ;
+}
+
+header div a {
+    background-color:#ffffff;
+    ;
+}
+
+
+.imgChango {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: aliceblue;
+}
+
+
+
+.Info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    margin: 20px;
+    padding: auto;
+}
+
+.Info div p {
+    text-align: center ;
+}
+
+
+.SeccionBurgers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorBuscador {
+    margin: 10px;
+    width: 250px;
+    height: 40px;
+}
+
+.contenedorBuscador input {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+.CardsBurgers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.CardsBurgers div {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ImgBurger {
+    width: 500px;
+    height: 400px;
+    object-fit:contain;
+    padding: auto;
+    margin: auto;
+}
+
+.BtnEliminar {
+    width: 2em;
+    height: 2em;
+}
+
+.BtnEliminar img {
+    width: 1em;
+    height: 1em;
+}
+
