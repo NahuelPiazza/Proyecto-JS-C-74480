@@ -6,6 +6,8 @@
 
 
 
+
+
 const productos = [
     {
         id: 1,
@@ -48,8 +50,45 @@ let Carrito = []
 
 const IVA = 1.25
 const descuento = 0.15
-const contactos = ["11 5025-7303","mail@gmail.com","otro"]
-const redes = ["facebook","instagram","google"]
+const redes = [
+    {
+        nombre: "facebook",
+        url: "https://www.facebook.com/search/top?q=hamburguesas&locale=es_LA",
+        img: "./imagenes/facebook_5968764.png",
+    },
+
+    {
+        nombre: "instagram",
+        url: "https://www.instagram.com/cope_burgers/?hl=es",
+        img: "./imagenes/instagram_2111463.png",
+    },
+
+    {
+        nombre:"google",
+        url:"https://acortar.link/kF7klb",
+        img: "./imagenes/google_13170545.png",
+    },
+]
+
+
+
+
+
+// funcion crear seccion redes footer
+
+let ContRedes = document.getElementById ("redes")
+
+function RedesFooter (itemsArray) {
+    itemsArray.forEach ( item => {
+        const red = document.createElement ("div")
+        red.innerHTML = `<a href="${item.url}" >
+                        <img src="${item.img}" alt="${item.nombre}">
+                        </img></a> ` 
+        ContRedes.appendChild (red)
+    })
+}
+
+
 
 
 
@@ -83,6 +122,10 @@ if (CarritoPrevio) {
     Carrito = CarritoPrevio
 }
 
+
+
+
+
 //funcion para crear las cards de cada hamburguesa
 
 let contenedorHamburguesa = document.getElementById ("listaProductos")
@@ -101,7 +144,19 @@ function CardsHamb (productsArray) {
     });
     agregarAlCarrito()
 }
+
+
+
+
+
+
+
+// funciones a ejecutar:
+
+
+
 CardsHamb (productos)
+RedesFooter (redes)
 
 
 
