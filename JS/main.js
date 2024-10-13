@@ -47,8 +47,8 @@ const productos = [
 
 let Carrito = []
 
-
-const IVA = 1.25
+const itemsearch = []
+const IVA = 1.21
 const descuento = 0.15
 const redes = [
     {
@@ -70,11 +70,12 @@ const redes = [
     },
 ]
 
+let buscador = document.getElementById("filtroCards")
 
 
 
 
-// funcion crear seccion redes footer
+// funcion crear seccion redes footer index 
 
 let ContRedes = document.getElementById ("redes")
 
@@ -90,9 +91,10 @@ function RedesFooter (itemsArray) {
 
 
 
+//funcion para agregar hamburguesas al carrito 
 
 
-//funcion para agregar hamburguesas al carrito (.currenttarget captura el valor (id, en este caso) del elemento)
+//(.currenttarget captura el valor (id, en este caso) del elemento)
 //estas funciones se cargan de manera global, por lo que debemos ejecutarla luego de renderizar las cards
 //ademas sumamos una funcion que agrega el producto del carrito al storage de mi sitio(el JSON.stringify convierte mi array en una cadena de caracteres)
 
@@ -161,12 +163,36 @@ RedesFooter (redes)
 
 
 
+
 //buscador
-// let buscador = document.getElementById("filtroCards")
+
 // buscador.onchange = () => {
-//     const item = productos.find ((producto) => producto.nombre == buscador.value)
-//     if (item == producto.nombre) {
+//     const element = productos.find ((producto) => producto.nombre == buscador.value)
+//     switch (element){
+//         case "Burger Egg n Beacon":
+//             card.innerHTML = ""
+//             CardsHamb (itemsearch)
+//             break
 
+//         case "Fully Chiken":
+//             card.innerHTML = ""
+//             CardsHamb (productos.id)
+//             break
+
+//         case "Suprema mushroom":
+//             card.innerHTML = ""
+//             CardsHamb (productos.id)
+//             break
+
+//         case "La Ultra":
+//             card.innerHTML = ""
+//             CardsHamb (productos.id)
+//             break
+
+//         default:
+//             alert("mostrar todas")
+//             break
 //     }
+        
+    
 // }
-
