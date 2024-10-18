@@ -107,7 +107,6 @@ function agregarAlCarrito() {
             const productoExiste = Carrito.some(producto => producto.id === HamburguesaSeleccionada.id);
             if (!productoExiste) {
                 Carrito.push(HamburguesaSeleccionada)
-
                 // Guardar en localStorage
                 localStorage.setItem("CardProduct", JSON.stringify(Carrito));
             } else {

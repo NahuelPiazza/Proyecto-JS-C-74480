@@ -1,13 +1,16 @@
-let CarritoBox = document.getElementById ("SeccionCarrito")
+//tomo los datos de los productos en storage
 
 let CarritoStorage = localStorage.getItem("CardProduct")
-CarritoStorage= JSON.parse(CarritoStorage)
+CarritoStorage = JSON.parse(CarritoStorage)
 
 let CarroTotalBox = document.getElementById ("CTN-precioTOT")
+
 
 let totalCarrito = []
 //ver que se guarde en el storage la cantidad de los productos tambien
 
+
+let CarritoBox = document.getElementById ("SeccionCarrito")
 //funcion para crear card del total del carrito
 
 function CardTotal () {
@@ -21,6 +24,11 @@ function CardTotal () {
 }
 
 
+//funcion para crear input y tomar los datos del cliente asi finalizar compra
+
+function finalizarCompra () {
+    
+}
 
 //funcion aplicar descuento 
 // function AplicarDescuento (productos) {
@@ -46,48 +54,28 @@ function AplicarIMP () {
 }
 
 
-// funcion de actualizado
-
-function ActInventario () {
-    CarritoBox.innerHTML = "";
-}
-
-
-
 // // Función para eliminar un producto del carrito
 
-
 function eliminarProducto (index) {
-    let CarritoACT = JSON.parse(localStorage.getItem("CardProduct"));
-    CarritoACT.splice(index, 1);
-    // CarritoACT = CarritoACT.filter((_,i) => i !== index);
-    //document.getElementById("SeccionCarrito").innerHTML = ""
-    localStorage.setItem("CardProduct",JSON.stringify(CarritoACT));
-    ActInventario ()
-    TableCarrito(CarritoACT);
+    CarritoStorage.splice(index, 1);
+    localStorage.setItem("CardProduct",JSON.stringify(CarritoStorage));
+    CarritoBox.innerHTML = "";
+    TableCarrito(CarritoStorage);
 }
-
-
 
 
 //funcion total del carrito
 
-
 function CalcularTotal  ()  {
-
+    totalCarrito = []
     let total = CarritoStorage.reduce((acc, producto) => {
         const cantidad = parseInt(document.getElementById(`ContadorUnidad-${producto.id}`).innerText);
         return acc + (producto.precio * cantidad);
     }, 0);
     totalCarrito.push (total)
 
-    CardTotal (totalCarrito)
-    
-    //cuando elimino un producto del carrito tira error
-        
+    CardTotal ()
 }
-
-
 
 
 //funcion para crear tabla con carrito (sumador,restador y eliminador)
@@ -112,7 +100,6 @@ function TableCarrito (productsArray) {
     let PrecioYCantidad = document.getElementById (`precioDelProd-${producto.id}`)
     
     sumador.onclick = () => {
-        totalCarrito = []
         counter++
         contador.innerHTML = counter
         PrecioYCantidad.innerHTML = counter * producto.precio
@@ -120,7 +107,6 @@ function TableCarrito (productsArray) {
     }
     
     restador.onclick = () => {
-        totalCarrito = []
         if (counter >= 1) {
         counter--
         contador.innerHTML = counter
@@ -135,8 +121,9 @@ function TableCarrito (productsArray) {
 
     eliminador.onclick = () => {
         eliminarProducto (index)
-
-
+        CarroTotalBox.innerHTML = ""
+        CalcularTotal (CarritoStorage)
+        
     }
 
 
