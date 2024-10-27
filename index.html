@@ -3,78 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&family=Titillium+Web:ital,wght@0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- js -->
     <script defer src="./JS/main.js"></script>
+
     <title>PROYECTO HAMBURGUESAS</title>
 </head>
 <body>
     <header>
         <div class="Encabezado">
-            <div class="logo"><img src="./imagenes/burger_4011047.png" alt="imagen logo"></img></div>
-            <div><h1>¡¡Hamburtastic!!</h1></div>
+            <div class="logo">
+                <img src="./imagenes/burger_4011047.png" alt="imagen logo"></img>
+            </div>
+            <div>
+                <h1>Rick´s burgers</h1>
+            </div>
             <div id="carritoDeCompra" class="Carro">
                 <a href="./pages/carrito.html"><img class="imgChango" src="./imagenes/shopping-cart_4163084.png" alt="changuito"></a>
             </div>
         </div>
     </header>
+    <hr>
     <main>
         <!--aca colocamos la informacion para el usuario -->
         <div class="Info">
             <div>
-                <h2>Bienvenido a nuestra fabulosa tienda de hamburguesas</h2>
+                <h2>Hamburguesas de otra Galaxia</h2>
             </div>
             <div>
                 <p>Contamos con un gran variedad, Elige la que mas te apetece
                 y deleitate con nuestros manjares culinarios.
-                <hr>
-                este sitio es unicamente para pedidos por delibery.
-                los envios se realizan a partir de 19hs hasta las 23:30, de martes a domingos.
-                somos de Bernal,Qulmes. envios por zona sur
                 </p>
             </div>
-        </div>
-        
-        <div class="SeccionBurgers">
-            <!-- buscador para las hamburguesas -->
-            <div class="contenedorBuscador"> 
-                <input type="text" id="filtroCards" placeholder="¿Que hamburguesa Desea?">
-            </div>
             <div>
-                <p>variedad:</p>
-
-                <!-- podemos definir una funcion  que agregue cada nombre a la lista -->
-                <ul>
-                    <li>Burger Egg n Beacon</li>
-                    <li>Fully Chiken</li>
-                    <li>Suprema mushroom</li>
-                    <li>La Ultra</li>
-                </ul>
+                <p>
+                    Este sitio es unicamente para pedidos por delibery.
+                    <br>
+                    Los envios se realizan a partir de 19hs hasta las 23:30, de martes a domingos.
+                    <br>
+                    Envios unicamente por zona sur</p>
             </div>
-            <hr> 
+        </div>
+        <hr>
+        <div class="SeccionBurgers">
             <div>
                 <h3>Nuestras Hamburguesas</h3>
             </div>
             <!-- cards de cada hamburguesa -->
-            <div>
-                <div id="listaProductos" class="CardsBurgers">
-                </div>
+            <div id="listaProductos" class="CardsBurgers">
             </div>
-
         </div>
     </main>
+
     <hr>
+
     <footer>
         <div class="ctn-footer">
-            <div id="redes">
-
+            <div id="redes" class="ctn-redes">
             </div>
             
             <div>
-                <p>@copyright 2024 Hamburtastic</p>
+                <p>@copyright 2024 Rick´s Burgers</p>
             </div>
-
         </div>
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

@@ -1,0 +1,19 @@
+[
+    {
+        "nombre": "facebook",
+        "url": "https://www.facebook.com/search/top?q=hamburguesas&locale=es_LA",
+        "img": "./imagenes/facebook_5968764.png"
+    },
+
+    {
+        "nombre": "instagram",
+        "url": "https://www.instagram.com/cope_burgers/?hl=es",
+        "img": "./imagenes/instagram_2111463.png"
+    },
+
+    {
+        "nombre":"google",
+        "url":"https://acortar.link/kF7klb",
+        "img": "./imagenes/google_13170545.png"
+    }
+]

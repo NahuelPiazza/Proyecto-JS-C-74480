@@ -1,14 +1,14 @@
 //tomo los datos de los productos en storage
 
+//puedo agregar un setinterval que muestre un mensaje conde figura un codigo de descuento 
+//si agrega los 4 productos al carrito
+
+
 let CarritoStorage = localStorage.getItem("CardProduct")
 CarritoStorage = JSON.parse(CarritoStorage)
-
 let CarroTotalBox = document.getElementById ("CTN-precioTOT")
-
-
 let totalCarrito = []
 //ver que se guarde en el storage la cantidad de los productos tambien
-
 
 let CarritoBox = document.getElementById ("SeccionCarrito")
 //funcion para crear card del total del carrito
@@ -22,7 +22,6 @@ function CardTotal () {
                         
     CarroTotalBox.appendChild (CardTot)
 }
-
 
 //funcion para crear input y tomar los datos del cliente asi finalizar compra
 
@@ -48,11 +47,6 @@ function finalizarCompra () {
 // }
 
 //funcion aplicar impuestos
-
-function AplicarIMP () {
-
-}
-
 
 // // Función para eliminar un producto del carrito
 
@@ -130,6 +124,7 @@ function TableCarrito (productsArray) {
     });
     CalcularTotal (CarritoStorage)
 }
+
 
 
 TableCarrito(CarritoStorage)

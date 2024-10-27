@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "imagen": "./imagenes/hamburguesa1.jpg",
+        "nombre": "Burger Egg n Beacon",
+        "precio": 5950,
+        "contenido": "medallon de carne de 150gr, huevos revueltos,chedddar, beacon, lechuga, tomate y mayonesa"
+    },
+
+    {
+        "id": 2,
+        "imagen":"./imagenes/hamburguesa2.jpg",
+        "nombre": "Fully Chiken",
+        "precio": 7900,
+        "contenido": "medallon de pollo krispy, medallon de espinaca,cheddar, panceta,lechuga morada y salsa agridulce"
+    },
+
+
+    {
+        "id": 3,
+        "imagen": "./imagenes/hamburguesa3.jpg",
+        "nombre": "Suprema mushroom",
+        "precio": 8500,
+        "contenido": "suprema de pollo,cheddar, cebolla, champiñones, tomate, lechuga y nuestra salsa especial"
+    },
+
+    {
+        "id": 4,
+        "imagen": "./imagenes/hamburguesa4.jpg",
+        "nombre": "La Ultra",
+        "precio": 7400,
+        "contenido": "doble medallon de carne de 100gr, chedar, panceta, lechuga, tomate, pepinillos, morrones asados y salsas spicy"
+    }
+
+
+]
