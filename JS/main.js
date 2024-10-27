@@ -56,7 +56,7 @@ function agregarAlCarrito() {
                 // Guardar en localStorage
                 localStorage.setItem("CardProduct", JSON.stringify(Carrito));
             } else {
-                alert("Este producto ya está en el carrito");
+                Swal.fire("Ya has agregado este producto al carrito!!");
             }
 
 
