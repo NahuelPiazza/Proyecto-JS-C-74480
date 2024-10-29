@@ -82,8 +82,8 @@ function CardsHamb (productsArray) {
         const card = document.createElement ("div")
         card.innerHTML =  ` <img src="${producto.imagen}" alt="imagen burger" class="ImgBurger-${producto.id}">
                             <h4>${producto.nombre}</h4>
-                            <p>precio:$${producto.precio}</p>
-                            <p>Descripcion: ${producto.contenido}</p>
+                            <p class="p-precio">$${producto.precio}</p>
+                            <p class="p-desc"><span>Descripcion:</span> ${producto.contenido}</p>
                             <button class="botonAgregar" id="${producto.id}">agregar al carro</button>`
         contenedorHamburguesa.appendChild (card)
         

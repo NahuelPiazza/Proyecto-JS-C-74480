@@ -18,35 +18,47 @@ function CardTotal () {
     const CardTot = document.createElement ("div")
     CardTot.innerHTML = `<div><h3>aca poner img</h3></div>
                         <div><h3>TOTAL:</h3></div>
-                        <div><P>$${totalCarrito}</P></div>`
+                        <div><P>$${totalCarrito}</P></div>
+                        <button id="Finalizar">finalizar compra</button>`
                         
+    
+    
     CarroTotalBox.appendChild (CardTot)
-}
 
-//funcion para crear input y tomar los datos del cliente asi finalizar compra
+    let btnFinalizar = document.getElementById ("Finalizar")
 
-function finalizarCompra () {
-    
-}
-
-//funcion aplicar descuento 
-// function AplicarDescuento (productos) {
-//     const discount = productos.map((producto) => {
-//         let precioOFF = producto.precio - (producto.precio*descuento)
-//         return {
+    btnFinalizar.onclick = () => {
+        Swal.fire({
+            title: "Coloque dirección de envio",
+            input: "text",
+            showCancelButton: true,
+            cancelButtonText: "cancelar",
+            confirmButtonText: "Finalizar compra",
+            showLoaderOnConfirm: true,
+        }).then ((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                title: "Comprado",
+                text:   `"tu compra por "$${totalCarrito}" sera enviada a "${result.value}"  en los proximos 30-40 min, Esperemos disfrute su comida." ` ,
+                icon: "success"
+                }),
+                localStorage.clear("CardProduct");
+                CarritoBox.innerHTML = "";
+                CarroTotalBox.innerHTML = "";
+            } else {
+                    Swal.fire({
+                        title: "volviendo al carrito",
+                        text: "Esperemos no se arrepienta, de verdad son de otra galaxia las hamburguesas",
+                        icon: "warning"
+                    })
+                
+                };
             
-//         id: producto.id,
-//         imagen: producto.img,
-//         nombre: producto.nombre,
-//         precio: precioOFF,
-//         contenido: producto.contenido,
-    
-//         }
-//     //tengo que ponerlo en el total
-//     })
-// }
+        })}
 
-//funcion aplicar impuestos
+
+}
+
 
 // // Función para eliminar un producto del carrito
 
@@ -96,7 +108,7 @@ function TableCarrito (productsArray) {
     sumador.onclick = () => {
         counter++
         contador.innerHTML = counter
-        PrecioYCantidad.innerHTML = counter * producto.precio
+        PrecioYCantidad.innerHTML = `$${counter * producto.precio} `
         CalcularTotal (CarritoStorage)
     }
     
@@ -104,7 +116,7 @@ function TableCarrito (productsArray) {
         if (counter >= 1) {
         counter--
         contador.innerHTML = counter
-        PrecioYCantidad.innerHTML = counter * producto.precio
+        PrecioYCantidad.innerHTML =  `$${counter * producto.precio} `
         CalcularTotal (CarritoStorage)
 
         }
