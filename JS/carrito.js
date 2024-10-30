@@ -17,8 +17,7 @@ function CardTotal () {
     CarroTotalBox.innerHTML = ""
     const CardTot = document.createElement ("div")
     CardTot.innerHTML = `<div><h3>aca poner img</h3></div>
-                        <div><h3>TOTAL:</h3></div>
-                        <div><P>$${totalCarrito}</P></div>
+                        <div><h3>TOTAL: $${totalCarrito}</h3></div>
                         <button id="Finalizar">finalizar compra</button>`
                         
     

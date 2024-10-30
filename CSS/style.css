@@ -291,33 +291,58 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
 }
 
 
 
 .cnt-titulo-carro h2 {
-    color: #d2d6ea;
+    color: #eff0f3;
+    text-align: center;
+    font-size: 45px;
+    padding-top: 15px;
     
 }
 
+.cnt-tabla-carro section {
+    background-color: #fdfdfdb2;
+    border-style: solid;
+    border-color: aquamarine;
+    padding: 20px;
+}
+
+.cnt-tabla-carro section table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cnt-tabla-carro section table tr {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .cnt-tabla-carro section table  h4{
-    color: #d2d6ea;
+    color: #79787e;
 }
 
 .cnt-tabla-carro section table  p{
-    color: #d2d6ea;
+    color: #79787e;
 }
 
 .cnt-tabla-carro section table  span {
-    color: #d2d6ea;
+    color: #79787e;
 }
 
 .ctn-total-carro div div h3 {
-    color: #d2d6ea;
+    color: #79787e;
 }
 
 .ctn-total-carro div div p {
-    color: #d2d6ea;
+    color: #79787e;
 }
 
 
