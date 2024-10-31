@@ -56,7 +56,10 @@ function agregarAlCarrito() {
                 // Guardar en localStorage
                 localStorage.setItem("CardProduct", JSON.stringify(Carrito));
             } else {
-                Swal.fire("Ya has agregado este producto al carrito!!");
+                Swal.fire({
+                    title: 'Producto ya agregado al carro',
+                    icon: 'warning',
+                });
             }
 
 
@@ -83,7 +86,7 @@ function CardsHamb (productsArray) {
         card.innerHTML =  ` <img src="${producto.imagen}" alt="imagen burger" class="ImgBurger-${producto.id}">
                             <h4>${producto.nombre}</h4>
                             <p class="p-precio">$${producto.precio}</p>
-                            <p class="p-desc"><span>Descripcion:</span> ${producto.contenido}</p>
+                            <p class="p-desc">${producto.contenido}</p>
                             <button class="botonAgregar" id="${producto.id}">agregar al carro</button>`
         contenedorHamburguesa.appendChild (card)
         
