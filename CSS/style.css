@@ -348,13 +348,19 @@ body {
     text-align: center;
     font-size: 45px;
     padding-top: 15px;
-    
+    text-shadow: 1px 1px 5px #7963e9;
+    font-family:"Tiny5", sans-serif;
+}
+
+.cnt-tabla-carro { 
+    width: auto;
+    box-shadow: 0px 0px 6px 2px #d9af87;
 }
 
 .cnt-tabla-carro section {
-    background-color: #fdfdfdb2;
+    background-color: #fdfdfd50;
     border-style: solid;
-    border-color: aquamarine;
+    border-color: rgb(208, 187, 134);
     padding: 20px;
 }
 
@@ -369,37 +375,64 @@ body {
 .cnt-tabla-carro section table tr {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
 .cnt-tabla-carro section table  h4{
-    color: #79787e;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px hsl(216, 88%, 51%);
+    font-size: 25px;
 }
 
 .cnt-tabla-carro section table  p{
-    color: #79787e;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px hsl(152, 88%, 51%);
+    font-size: 20px;
 }
 
 .cnt-tabla-carro section table  span {
-    color: #79787e;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px hsl(66, 88%, 51%);
+    font-size: 25px;
 }
 
 .ctn-total-carro div div h3 {
-    color: #79787e;
-}
-
-.ctn-total-carro div div p {
-    color: #79787e;
+    color: #ffffff;
+    text-shadow: 1px 1px 15px hsl(325, 88%, 51%);
+    font-size: 25px;
 }
 
 
-.BtnEliminar {
-    width: 2em;
-    height: 2em;
-}
 
 .BtnEliminar img {
-    width: 1em;
-    height: 1em;
+    fill:none ;
+    height: 20px ;
+    width: 20px;
 }
 
+.BtnEliminar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border: 0px solid transparent;
+    background-color: rgb(254, 34, 100);
+    border-radius: 1.25em;
+    transition: all 0.2s linear;
+}
+
+.BtnEliminar:hover {
+    box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.73),
+    8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
+    17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
+    36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
+    99px 72px 143px rgba(0, 0, 0, 0.08);
+    }
+    
+    .BtnEliminar {
+    position: relative;
+    display: inline-block;
+}

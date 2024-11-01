@@ -16,9 +16,9 @@ let CarritoBox = document.getElementById ("SeccionCarrito")
 function CardTotal () {
     CarroTotalBox.innerHTML = ""
     const CardTot = document.createElement ("div")
-    CardTot.innerHTML = `<div><h3>aca poner img</h3></div>
+    CardTot.innerHTML = `
                         <div><h3>TOTAL: $${totalCarrito}</h3></div>
-                        <button id="Finalizar">finalizar compra</button>`
+                        <button id="Finalizar" class="btn-finalizar">finalizar compra</button>`
                         
     
     
@@ -94,7 +94,7 @@ function TableCarrito (productsArray) {
                                 <td><span id="ContadorUnidad-${producto.id}">1</span></td>
                                 <td><button id="BotonRestar-${producto.id}">-</button></td>
                                 <td><button id="BotonEliminar-${producto.id}" class="BtnEliminar">
-                                <img src="../imagenes/delete_8567839.png" alt="icono-eliminar"></img></button></td>`
+                                <img src="../imagenes/delete_8567839.png" alt="delete"></img></button></td>`
         CarritoBox.appendChild (FilaProd)
 
          //funcion de sumar y restar cantidad de productos
