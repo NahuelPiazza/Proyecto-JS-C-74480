@@ -18,6 +18,7 @@ function CardTotal () {
     const CardTot = document.createElement ("div")
     CardTot.innerHTML = `
                         <div><h3>TOTAL: $${totalCarrito}</h3></div>
+                        <br>
                         <button id="Finalizar" class="btn-finalizar">finalizar compra</button>`
                         
     
@@ -88,13 +89,12 @@ function CalcularTotal  ()  {
 function TableCarrito (productsArray) {
     productsArray.forEach ((producto , index) => {
         const FilaProd = document.createElement ("tr")
-        FilaProd.innerHTML =  `<td><h4>${producto.nombre}</h4></td>
-                                <td><p id="precioDelProd-${producto.id}">$${producto.precio}</p></td>
-                                <td><button id="BotonSumar-${producto.id}">+</button></td>
+        FilaProd.innerHTML =  `<td><h4>${producto.nombre}:</h4></td>
+                                <td><p id="precioDelProd-${producto.id}"> $${producto.precio} </p></td>
+                                <td><button id="BotonSumar-${producto.id}" class="btn-sumar">+</button></td>
                                 <td><span id="ContadorUnidad-${producto.id}">1</span></td>
-                                <td><button id="BotonRestar-${producto.id}">-</button></td>
-                                <td><button id="BotonEliminar-${producto.id}" class="BtnEliminar">
-                                <img src="../imagenes/delete_8567839.png" alt="delete"></img></button></td>`
+                                <td><button id="BotonRestar-${producto.id}" class="btn-restar">-</button></td>
+                                <td><button id="BotonEliminar-${producto.id}" class="BtnEliminar">❌</button></td>`
         CarritoBox.appendChild (FilaProd)
 
          //funcion de sumar y restar cantidad de productos

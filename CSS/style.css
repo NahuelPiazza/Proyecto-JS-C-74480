@@ -127,7 +127,7 @@ body {
     width: 75%;
 }
 .ctn-info div h2 {
-    color: #d2d6ea;
+    color: #f6f7fa;
     font-family:"Tiny5", sans-serif;
     font-size: 35px;
     text-shadow: 0px 0px 5px #ffb876;
@@ -156,7 +156,7 @@ body {
 }
 
 .SeccionBurgers h3 {
-    color: #d2d6ea;
+    color: #f2f4fc;
     font-size: 35px;
     font-family:"Tiny5", sans-serif;
     text-shadow: 0px 0px 5px  #e48d3bc8;
@@ -354,14 +354,15 @@ body {
 
 .cnt-tabla-carro { 
     width: auto;
-    box-shadow: 0px 0px 6px 2px #d9af87;
+    
 }
 
 .cnt-tabla-carro section {
-    background-color: #fdfdfd50;
+    background-color: #fdfdfd3c;
     border-style: solid;
-    border-color: rgb(208, 187, 134);
+    border-color: rgba(163, 203, 240, 0.438);
     padding: 20px;
+    box-shadow: 0px 0px 5px 5px #7963e9;
 }
 
 .cnt-tabla-carro section table {
@@ -388,51 +389,122 @@ body {
 
 .cnt-tabla-carro section table  p{
     color: #ffffff;
-    text-shadow: 0px 0px 10px hsl(152, 88%, 51%);
     font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .cnt-tabla-carro section table  span {
     color: #ffffff;
-    text-shadow: 0px 0px 10px hsl(66, 88%, 51%);
     font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .ctn-total-carro div div h3 {
     color: #ffffff;
-    text-shadow: 1px 1px 15px hsl(325, 88%, 51%);
     font-size: 25px;
 }
 
+.btn-sumar {
+    
+        width: 30px;
+        height: 30px;
+        border-radius: 45px;
+        transition: all 0.3s;
+        cursor: pointer;
+        background: #857e9364;
+        font-size: 1.2em;
+        font-weight: 550;
+    }
 
 
-.BtnEliminar img {
-    fill:none ;
-    height: 20px ;
-    width: 20px;
+.btn-restar {
+    
+    width: 30px;
+    height: 30px;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: #857e9364;
+    font-size: 1.2em;
+    font-weight: 550;
 }
+
+
+
+
 
 .BtnEliminar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    border: 0px solid transparent;
-    background-color: rgb(254, 34, 100);
-    border-radius: 1.25em;
-    transition: all 0.2s linear;
-}
+    width: 35px;
+    height: 32px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: #1007202c;
+    transition: 0.1s;
+    }
+
+
 
 .BtnEliminar:hover {
-    box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.73),
-    8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
-    17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
-    36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
-    99px 72px 143px rgba(0, 0, 0, 0.08);
-    }
-    
-    .BtnEliminar {
+    width: 35px;
+    height: 32px;
+    box-shadow: 0px 0px 5px 5px #c2b5ffaa;
+}
+
+.btn-finalizar {
+    --green: #79ddf3;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
     position: relative;
-    display: inline-block;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+.btn-finalizar:hover {
+    color: #66f4bf;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.btn-volver {
+    --green: #fd1baa;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(251, 3, 255, 0.492), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+.btn-volver a {
+    color: #db98f6;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-volver:hover {
+box-shadow: inset 0 0 10px rgba(253, 27, 219, 0.9), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.btn-volver a:hover {
+    color: #f400ab;
 }
